@@ -1,4 +1,4 @@
-import { Shield, Brain, Code, Zap } from "lucide-react";
+import { Shield, Brain, Code, Zap, Key } from "lucide-react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -9,6 +9,9 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import problemStatements from "./data/problemStatements.json";
+import { decryptProblemStatements } from "./utils/cipher";
+import { useState } from "react";
+import { DecryptedDialog } from "./components/DecryptedDialog";
 
 const icons = {
     Shield,
@@ -17,6 +20,27 @@ const icons = {
 };
 
 export default function App() {
+    const [key, setKey] = useState("");
+    const [decryptedData, setDecryptedData] = useState(problemStatements);
+    const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+
+    const handleDecrypt = (inputKey) => {
+        setKey(inputKey);
+        const newDecryptedData = decryptProblemStatements(
+            problemStatements,
+            inputKey,
+        );
+        setDecryptedData(newDecryptedData);
+
+        if (
+            newDecryptedData.decrypted ===
+                "yes the problem statement is decrypted by the user" &&
+            !showSuccessDialog
+        ) {
+            setShowSuccessDialog(true);
+        }
+    };
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -39,6 +63,11 @@ export default function App() {
             animate={{ opacity: 1 }}
             className="min-h-screen bg-black text-green-400 font-mono relative overflow-hidden"
         >
+            <DecryptedDialog
+                open={showSuccessDialog}
+                onOpenChange={setShowSuccessDialog}
+            />
+
             <div className="container mx-auto py-8 px-4 relative z-10">
                 <motion.header
                     initial={{ y: -50, opacity: 0 }}
@@ -64,6 +93,19 @@ export default function App() {
                     </div>
                 </motion.header>
 
+                <div className="mb-8 flex justify-center items-center gap-4">
+                    <div className="relative flex items-center">
+                        <Key className="absolute left-3 h-5 w-5 text-green-500" />
+                        <input
+                            type="text"
+                            value={key}
+                            onChange={(e) => handleDecrypt(e.target.value)}
+                            placeholder="Enter decryption key..."
+                            className="pl-10 pr-4 py-2 bg-gray-900 border-2 border-green-500 text-green-400 placeholder-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        />
+                    </div>
+                </div>
+
                 <Tabs defaultValue="cybersecurity" className="w-full">
                     <motion.div
                         variants={container}
@@ -71,7 +113,7 @@ export default function App() {
                         animate="show"
                     >
                         <TabsList className="grid w-full grid-cols-1 h-min mb-8 bg-gray-900 border-cyan-500 p-0 rounded-none md:grid-cols-3">
-                            {Object.entries(problemStatements.tracks).map(
+                            {Object.entries(decryptedData.tracks).map(
                                 ([key, track]) => {
                                     const IconComponent = icons[track.icon];
                                     return (
@@ -100,7 +142,7 @@ export default function App() {
                             )}
                         </TabsList>
 
-                        {Object.entries(problemStatements.tracks).map(
+                        {Object.entries(decryptedData.tracks).map(
                             ([key, track]) => (
                                 <TabsContent
                                     key={key}
