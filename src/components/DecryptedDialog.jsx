@@ -20,6 +20,14 @@ export function DecryptedDialog({ open, onOpenChange }) {
                     </DialogTitle>
                     <DialogDescription className="text-red-400 text-center">
                         You have successfully decrypted the problem statements.
+                        <div className="mt-4 p-4 border border-red-500/30 bg-red-500/10">
+                            Please contact{" "}
+                            <span className="font-bold">
+                                Arhaan Bhiwandkar - +91 98200 66038
+                            </span>{" "}
+                            for further details. Make sure to share the
+                            screenshot!
+                        </div>
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
