@@ -77,10 +77,9 @@ export default function App() {
                 >
                     <div className="inline-block border-4 border-red-500 p-4 mb-4 shadow-[0_0_20px_rgba(255,0,0,0.5)]">
                         <h1 className="text-5xl font-bold tracking-tight text-red-500 uppercase">
-                            <span className="inline-block animate-pulse">
-                                H
-                            </span>
-                            <span>YPHEN</span>
+                            {"<"}
+                            <span className="animate-pulse">HYPHEN</span>
+                            {" />"}
                         </h1>
                     </div>
                     <h2 className="text-2xl uppercase tracking-widest mt-4 text-purple-400">

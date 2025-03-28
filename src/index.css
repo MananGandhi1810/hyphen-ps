@@ -133,3 +133,23 @@
 .retro-border {
     box-shadow: 0 0 0 2px inset currentColor, 0 0 0 4px inset rgba(0, 0, 0, 0.5);
 }
+
+@keyframes typing {
+    0% {
+        width: 0
+    }
+
+    50% {
+        width: 100%
+    }
+
+    100% {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
