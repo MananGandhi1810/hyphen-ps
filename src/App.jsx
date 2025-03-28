@@ -61,7 +61,7 @@ export default function App() {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen bg-black text-green-400 font-mono relative overflow-hidden"
+            className="min-h-screen bg-black text-red-400 font-mono relative overflow-hidden"
         >
             <DecryptedDialog
                 open={showSuccessDialog}
@@ -75,8 +75,8 @@ export default function App() {
                     transition={{ duration: 0.5 }}
                     className="mb-12 text-center"
                 >
-                    <div className="inline-block border-4 border-green-500 p-4 mb-4 shadow-[0_0_20px_rgba(0,255,0,0.5)]">
-                        <h1 className="text-5xl font-bold tracking-tight text-green-500 uppercase">
+                    <div className="inline-block border-4 border-red-500 p-4 mb-4 shadow-[0_0_20px_rgba(255,0,0,0.5)]">
+                        <h1 className="text-5xl font-bold tracking-tight text-red-500 uppercase">
                             <span className="inline-block animate-pulse">
                                 H
                             </span>
@@ -95,13 +95,13 @@ export default function App() {
 
                 <div className="mb-8 flex justify-center items-center gap-4">
                     <div className="relative flex items-center">
-                        <Key className="absolute left-3 h-5 w-5 text-green-500" />
+                        <Key className="absolute left-3 h-5 w-5 text-red-500" />
                         <input
                             type="text"
                             value={key}
                             onChange={(e) => handleDecrypt(e.target.value)}
                             placeholder="Enter decryption key..."
-                            className="pl-10 pr-4 py-2 bg-gray-900 border-2 border-green-500 text-green-400 placeholder-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                            className="pl-10 pr-4 py-2 bg-gray-900 border-2 border-red-500 text-red-400 placeholder-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                         />
                     </div>
                 </div>
@@ -130,7 +130,7 @@ export default function App() {
                                                     : track.color === "purple"
                                                     ? "255,0,255"
                                                     : "0,255,255"
-                                            },0.5)] rounded-none transition-all border-green-500`}
+                                            },0.5)] rounded-none transition-all border-red-500`}
                                         >
                                             <IconComponent className="h-5 w-5" />
                                             <span className="uppercase tracking-wider">
@@ -165,49 +165,54 @@ export default function App() {
                                         initial="hidden"
                                         animate="show"
                                     >
-                                        {track.problems.map((problem) => (
-                                            <motion.div
-                                                key={problem.id}
-                                                variants={item}
-                                            >
-                                                <Card
-                                                    className={`border-4 m-2 border-${
-                                                        track.color
-                                                    }-500 bg-gray-900 rounded-none p-0 shadow-[0_0_15px_rgba(${
-                                                        track.color === "yellow"
-                                                            ? "255,255,0"
-                                                            : track.color ===
-                                                              "purple"
-                                                            ? "255,0,255"
-                                                            : "0,255,255"
-                                                    },0.3)] gap-0`}
+                                        {track.problems.map((problem) => {
+                                            return (
+                                                <motion.div
+                                                    key={problem.id}
+                                                    variants={item}
                                                 >
-                                                    <CardHeader
-                                                        className={`border-b-2 border-${track.color}-700 bg-${track.color}-900/30 p-4`}
+                                                    <Card
+                                                        className={`border-4 m-2 border-${
+                                                            track.color
+                                                        }-500 bg-gray-900 rounded-none p-0 shadow-[0_0_15px_rgba(${
+                                                            track.color ===
+                                                            "yellow"
+                                                                ? "255,255,0"
+                                                                : track.color ===
+                                                                  "purple"
+                                                                ? "255,0,255"
+                                                                : "0,255,255"
+                                                        },0.3)] gap-0`}
                                                     >
-                                                        <div className="flex items-center">
-                                                            <div
-                                                                className={`w-4 h-4 rounded-full bg-${track.color}-500 mr-3 animate-pulse`}
-                                                            ></div>
-                                                            <CardTitle
-                                                                className={`text-${track.color}-400 uppercase tracking-wider`}
-                                                            >
-                                                                {problem.title}
-                                                            </CardTitle>
-                                                        </div>
-                                                    </CardHeader>
-                                                    <CardContent
-                                                        className={`p-4 text-${track.color}-100`}
-                                                    >
-                                                        <p className="">
-                                                            {
-                                                                problem.description
-                                                            }
-                                                        </p>
-                                                    </CardContent>
-                                                </Card>
-                                            </motion.div>
-                                        ))}
+                                                        <CardHeader
+                                                            className={`border-b-2 border-${track.color}-700 bg-${track.color}-900/30 p-4`}
+                                                        >
+                                                            <div className="flex items-center">
+                                                                <div
+                                                                    className={`w-4 h-4 rounded-full bg-${track.color}-500 mr-3 animate-pulse`}
+                                                                ></div>
+                                                                <CardTitle
+                                                                    className={`text-${track.color}-400 uppercase tracking-wider`}
+                                                                >
+                                                                    {
+                                                                        problem.title
+                                                                    }
+                                                                </CardTitle>
+                                                            </div>
+                                                        </CardHeader>
+                                                        <CardContent
+                                                            className={`p-4 text-${track.color}-100`}
+                                                        >
+                                                            <p className="">
+                                                                {
+                                                                    problem.description
+                                                                }
+                                                            </p>
+                                                        </CardContent>
+                                                    </Card>
+                                                </motion.div>
+                                            );
+                                        })}
                                     </motion.div>
                                 </TabsContent>
                             ),
@@ -219,10 +224,10 @@ export default function App() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.2 }}
-                    className="text-center mt-12 text-xs text-green-500 font-mono"
+                    className="text-center mt-12 text-xs text-red-500 font-mono"
                 >
                     <p>© 2025 HYPHEN IDEATHON // SYSTEM VERSION 1.0.1</p>
-                    <div className="h-px w-48 bg-green-500 mx-auto mt-2 opacity-50"></div>
+                    <div className="h-px w-48 bg-red-500 mx-auto mt-2 opacity-50"></div>
                 </motion.div>
             </div>
         </motion.div>
