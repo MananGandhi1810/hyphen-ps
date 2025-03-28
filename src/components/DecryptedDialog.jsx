@@ -22,9 +22,14 @@ export function DecryptedDialog({ open, onOpenChange }) {
                         You have successfully decrypted the problem statements.
                         <div className="mt-4 p-4 border border-red-500/30 bg-red-500/10">
                             Please contact{" "}
-                            <span className="font-bold">
+                            <a 
+                                href="https://wa.me/919820066038?text=Hey%20Arhaan!%0AI%20have%20successfully%20cracked%20the%20code!!" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="font-bold text-red-400 underline hover:text-red-300"
+                            >
                                 Arhaan Bhiwandkar - +91 98200 66038
-                            </span>{" "}
+                            </a>{" "}
                             for further details. Make sure to share the
                             screenshot!
                         </div>
