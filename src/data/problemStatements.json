@@ -1,108 +1,49 @@
 {
+    "decrypted": "frhe",
     "tracks": {
         "cybersecurity": {
-            "name": "CYBERSECURITY TRACK",
+            "name": "CyberSecurity",
             "color": "cyan",
             "icon": "Shield",
             "problems": [
                 {
-                    "id": "CS01",
-                    "title": "Secure Authentication System",
-                    "description": "Design a multi-factor authentication system that balances security with user experience. Your solution should address common vulnerabilities while maintaining ease of use for non-technical users.",
-                    "requirements": [
-                        "Implement at least two authentication factors",
-                        "Address common vulnerabilities (phishing, credential stuffing, etc.)",
-                        "Provide a user-friendly interface for non-technical users",
-                        "Include recovery mechanisms for lost credentials"
-                    ],
-                    "evaluationCriteria": [
-                        "Security effectiveness",
-                        "User experience and accessibility",
-                        "Implementation feasibility",
-                        "Innovation in approach"
-                    ]
+                    "id": "OS01",
+                    "title": "Eepuem Saklegfipagqgt Jcsmqm",
+                    "description": "Pefitv s slptb-raptbz saklegfipagqgt jcsmqm ghnb tgcenvqs fepcjokc wbfh hsrz wdgirbqnpe. Lwmx jslnfibn fpgach awprrsf kgsdsn oglaeeitocmtbqs jhvtw srmnmmiaiao wgji oy gsr fbz fue-xevtnvcnt myvvs."
                 },
                 {
-                    "id": "CS02",
-                    "title": "Threat Detection Framework",
-                    "description": "Develop a framework for real-time detection of network intrusions and malicious activities. Your solution should be capable of identifying both known and novel attack patterns with minimal false positives.",
-                    "requirements": [
-                        "Real-time monitoring and detection capabilities",
-                        "Ability to detect both signature-based and anomaly-based threats",
-                        "Minimization of false positives",
-                        "Scalable architecture for enterprise environments"
-                    ],
-                    "evaluationCriteria": [
-                        "Detection accuracy and speed",
-                        "False positive/negative rates",
-                        "Scalability and performance",
-                        "Adaptability to new threats"
-                    ]
+                    "id": "OS02",
+                    "title": "Fheenb Vkkicmuoa Feieknsrd",
+                    "description": "Peieywh g wvafqwbrx ngx iiae-fize qmlktxihz os nrbouio igfrhsvwfy rrd fmlvcvwmy rgtbhigira. Qulv shxugibv knfylw ne pacitrv sf bpeatvnqoek bhfh xnbef geh nhhey agbsib tamfeenf eazy qigumnl sidyv tolutvvra."
                 },
                 {
-                    "id": "CS03",
-                    "title": "Secure IoT Communication",
-                    "description": "Create a lightweight security protocol for IoT devices with limited computational resources. Your solution should address encryption, authentication, and secure data transmission without compromising device performance.",
-                    "requirements": [
-                        "Lightweight encryption suitable for resource-constrained devices",
-                        "Secure device authentication mechanism",
-                        "Protection against common IoT vulnerabilities",
-                        "Minimal impact on battery life and performance"
-                    ],
-                    "evaluationCriteria": [
-                        "Security strength",
-                        "Resource efficiency",
-                        "Scalability across different IoT devices",
-                        "Practicality of implementation"
-                    ]
+                    "id": "OS03",
+                    "title": "Eepuem AuK Gofyuaipilofr",
+                    "description": "Orragm s rzkhmievgub kktyrbfy crbbgifp fhd IbT qmnotis putu lvuazvh chyphtnbaueel kqsbuekwy. Psuk eoyugqgt jlonxd ndqzwyj invdyctvwf, glxhxztvcnbaue, enw eepuem vgke tkmnfmvakofr wbfhbug kgsgvofusvnt lwbzge iqrsoeustti."
                 }
             ]
         },
         "ai": {
-            "name": "AI TRACK",
+            "name": "Artificial Intelligence",
             "color": "purple",
             "icon": "Brain",
             "problems": [
                 {
-                    "id": "AI01",
-                    "title": "Ethical AI Decision-Making",
-                    "description": "Design a framework for ensuring ethical decision-making in AI systems. Your solution should address bias detection, fairness metrics, and transparency in AI-driven decisions across various domains.",
-                    "requirements": [
-                        "Methodology for detecting and mitigating bias in AI systems",
-                        "Quantifiable fairness metrics for different application domains",
-                        "Transparency mechanisms to explain AI decisions to stakeholders",
-                        "Consideration of diverse ethical frameworks and cultural contexts"
-                    ],
-                    "evaluationCriteria": [
-                        "Effectiveness in bias detection and mitigation",
-                        "Comprehensiveness of fairness considerations",
-                        "Clarity and usefulness of explanations",
-                        "Practical applicability across different AI systems"
-                    ]
+                    "id": "MI01",
+                    "title": "Qtuipid GZ Hevusvoa-Usqzrg",
+                    "description": "Pefitv s liemxioek swj kewukunt egpairp dxoifibv-egbmnz un NI fgkzvqs. Raue sbtmzzsn ltohlq ivjiisl nins qmlktxihz, fnievwyj qemdips, nvv zienlbaeeakq oe EI-wdiiea lwizwihzs ncewky merbauf dbusoew."
                 }
             ]
         },
         "webdev": {
-            "name": "WEB/APP DEV TRACK",
+            "name": "Web/App Development",
             "color": "yellow",
             "icon": "Code",
             "problems": [
                 {
-                    "id": "WD01",
-                    "title": "Community Resource Platform",
-                    "description": "Design a web platform that connects community members with local resources, services, and volunteer opportunities. Your solution should facilitate community engagement and support resource discovery and sharing.",
-                    "requirements": [
-                        "Resource discovery and filtering capabilities",
-                        "User-generated content and community contributions",
-                        "Volunteer matching and coordination features",
-                        "Accessibility across different devices and for users with disabilities"
-                    ],
-                    "evaluationCriteria": [
-                        "User experience and interface design",
-                        "Functionality and feature completeness",
-                        "Accessibility and inclusivity",
-                        "Potential community impact"
-                    ]
+                    "id": "ID01",
+                    "title": "Oozmhvazp Velauecr Xdgkjoky",
+                    "description": "Pefitv s cvf pemtsoeu lnrx chznrcga uudqugutl mrutkiw wbfh yopid xvwondcrs, fmjbzgel, mnq vbtmtkiek apcoebmtzxixe. Ybue agrlxihz suohtv lrgieutntr kgsdynbfy rntiykdinm mnq shxhuix rxeohrpm vojgooqrl aal knrvigs."
                 }
             ]
         }

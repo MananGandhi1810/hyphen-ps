@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+encrypt.py
+problemStatements.json
+output.json
