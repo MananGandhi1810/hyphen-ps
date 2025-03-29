@@ -20,7 +20,7 @@ export function DecryptedDialog({ open, onOpenChange }) {
                     </DialogTitle>
                     <DialogDescription className="text-red-400 text-center">
                         You have successfully decrypted the problem statements.
-                        <div className="mt-4 p-4 border border-red-500/30 bg-red-500/10">
+                        {/* <div className="mt-4 p-4 border border-red-500/30 bg-red-500/10">
                             Please contact{" "}
                             <a 
                                 href="https://wa.me/919820066038?text=Hey%20Arhaan!%0AI%20have%20successfully%20cracked%20the%20code!!" 
@@ -32,7 +32,7 @@ export function DecryptedDialog({ open, onOpenChange }) {
                             </a>{" "}
                             for further details. Make sure to share the
                             screenshot!
-                        </div>
+                        </div> */}
                     </DialogDescription>
                 </DialogHeader>
             </DialogContent>
