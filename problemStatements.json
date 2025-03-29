@@ -1,0 +1,56 @@
+{
+    "decrypted": "yes the problem statement is decrypted by the user",
+    "tracks": {
+        "cybersecurity": {
+            "name": "CyberSecurity",
+            "color": "cyan",
+            "icon": "Shield",
+            "problems": [
+                {
+                    "id": "CS01",
+                    "title": "Incident Response Automation and Streamlining",
+                    "description": "In the face of increasing cybersecurity threats, organizations struggle with slow and inefficient incident response processes that often rely on manual tasks. This leads to delayed detection and remediation, allowing incidents to escalate and cause greater damage. Additionally, the lack of standardization and integration among response procedures creates inconsistencies and gaps in handling incidents effectively. Resource constraints further exacerbate the issue, as many teams are overwhelmed by the volume of alerts and logs they must manage. The goal of this problem statement is to develop innovative solutions that automate and streamline incident response, enhancing efficiency, collaboration, and overall cybersecurity resilience."
+                },
+                {
+                    "id": "CS02",
+                    "title": "Gamification of Cybersecurity Awareness Training for Senior Citizens",
+                    "description": "As cyber threats continue to evolve, senior citizens often find themselves vulnerable due to a lack of awareness and understanding of online safety practices. Traditional cybersecurity training methods may not engage this demographic effectively, leading to low retention and application of critical knowledge. The challenge lies in creating an engaging and accessible training program that resonates with seniors, encouraging them to learn about cybersecurity in a fun and interactive way. By incorporating gamification elements, such as rewards, challenges, and social interaction, we can enhance motivation and retention of cybersecurity concepts. The objective of this problem statement is to design innovative gamified training solutions that empower senior citizens to protect themselves online and foster a culture of cybersecurity awareness."
+                }
+            ]
+        },
+        "ai": {
+            "name": "Artificial Intelligence",
+            "color": "purple",
+            "icon": "Brain",
+            "problems": [
+                {
+                    "id": "AI01",
+                    "title": "Identifying Fraudulent Sellers and Buyers on Peer-to-Peer Marketplaces",
+                    "description": "Peer-to-peer marketplaces have gained popularity, but they also face significant challenges related to fraudulent sellers and buyers, which can undermine trust and safety within the platform. Identifying fraudulent activities is often complicated by the anonymity of users and the sheer volume of transactions, leading to financial losses and a negative user experience. Current methods for detecting fraud may be reactive rather than proactive, resulting in delayed responses to suspicious behavior. The goal of this problem statement is to develop innovative solutions that leverage data analytics, machine learning, and user behavior analysis to identify and flag potential fraud in real-time. By enhancing the detection of fraudulent sellers and buyers, we can improve the overall integrity and security of peer-to-peer marketplaces, fostering a safer environment for all users."
+                },
+                {
+                    "id": "AI02",
+                    "title": "Leveraging AI for Digital Marketing",
+                    "description": "In the rapidly evolving landscape of digital marketing, businesses face the challenge of effectively reaching and engaging their target audiences amidst an overwhelming amount of data and competition. Traditional marketing strategies often struggle to deliver personalized experiences, leading to lower conversion rates and customer dissatisfaction. The challenge is to leverage artificial intelligence to analyze vast amounts of consumer data, identify trends, and predict behaviors, enabling marketers to create highly targeted and personalized campaigns. By utilizing AI-driven tools for customer segmentation, content optimization, and performance analytics, businesses can enhance their marketing strategies, improve customer engagement, and ultimately drive higher ROI. The objective of this problem statement is to develop innovative AI solutions that empower digital marketers to optimize their campaigns, enhance customer experiences, and achieve measurable results in a competitive marketplace."
+                }
+            ]
+        },
+        "webdev": {
+            "name": "Web/App Development",
+            "color": "yellow",
+            "icon": "Code",
+            "problems": [
+                {
+                    "id": "WAD01",
+                    "title": "B-Roll Collection for Video Editing",
+                    "description": "B-roll footage is essential for enhancing video storytelling, but creators often struggle to find high-quality, relevant clips that complement their primary content. The challenge lies in the time-consuming process of sourcing, organizing, and managing B-roll, which can hinder the efficiency of video editing workflows. Many creators lack access to a diverse library of B-roll that meets their specific needs, leading to repetitive visuals and diminished viewer engagement. The objective of this problem statement is to develop innovative solutions for streamlined B-roll collection and management, utilizing tools such as automated tagging, user-friendly search functionalities, and community-driven content sharing. By improving access to and organization of B-roll footage, we can empower video creators to enhance their projects and elevate the overall quality of their storytelling."
+                },
+                {
+                    "id": "WAD02",
+                    "title": "Technology to Connect Volunteers with Local Organizations for Community Service",
+                    "description": "Many local organizations struggle to connect with volunteers, while potential volunteers find it challenging to discover suitable opportunities that match their skills and interests. This disconnect results in underutilized resources and unmet community needs. The goal is to develop a technology-driven platform that seamlessly connects volunteers with local organizations seeking assistance. Key features should include user profiles, a smart matching algorithm, event management tools, and community engagement options. Ultimately, the solution should enhance volunteer participation, improve organizational visibility, and foster a stronger sense of community."
+                }
+            ]
+        }
+    }
+}
