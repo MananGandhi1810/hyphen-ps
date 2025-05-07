@@ -57,6 +57,15 @@ export default function App() {
         show: { opacity: 1, scale: 1 },
     };
 
+    const [copied, setCopied] = useState(false);
+    
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
+    };
+    
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -91,6 +100,34 @@ export default function App() {
                         <Zap className="h-6 w-6 text-yellow-400 animate-pulse" />
                     </div>
                 </motion.header>
+
+                <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-8 p-4 border-2 border-yellow-500 bg-yellow-900/20 text-yellow-300 shadow-[0_0_15px_rgba(255,255,0,0.3)]"
+                >
+                    <div className="flex items-center justify-center gap-2 font-bold">
+                        <Zap className="h-5 w-5 text-yellow-400" />
+                        <span>NOTICE:</span>
+                        <Zap className="h-5 w-5 text-yellow-400" />
+                    </div>
+                    <p className="text-center mt-2">
+                        This ideathon is now over. To check the problem
+                        statements, use code:{" "}
+                        <span 
+                            className="font-bold bg-yellow-900/50 px-2 py-1 cursor-pointer hover:bg-yellow-900/80 transition-colors relative"
+                            onClick={() => copyToClipboard("GDGCloudMumbai0101241000+")}
+                        >
+                            GDGCloudMumbai0101241000+
+                            {copied && (
+                                <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-900 text-green-300 px-2 py-1 text-xs rounded">
+                                    Copied!
+                                </span>
+                            )}
+                        </span>
+                    </p>
+                </motion.div>
 
                 <div className="mb-8 flex justify-center items-center gap-4">
                     <div className="relative flex items-center">
