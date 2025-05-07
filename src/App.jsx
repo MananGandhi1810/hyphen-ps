@@ -23,6 +23,8 @@ export default function App() {
     const [key, setKey] = useState("");
     const [decryptedData, setDecryptedData] = useState(problemStatements);
     const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+    const [codeRevealed, setCodeRevealed] = useState(false);
+    const [copied, setCopied] = useState(false);
 
     const handleDecrypt = (inputKey) => {
         setKey(inputKey);
@@ -57,15 +59,21 @@ export default function App() {
         show: { opacity: 1, scale: 1 },
     };
 
-    const [copied, setCopied] = useState(false);
-    
     const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(() => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         });
     };
-    
+
+    const handleCodeClick = () => {
+        if (codeRevealed) {
+            copyToClipboard("GDGCloudMumbai0101241000+");
+        } else {
+            setCodeRevealed(true);
+        }
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -117,12 +125,17 @@ export default function App() {
                         statements, use code:{" "}
                         <span 
                             className="font-bold bg-yellow-900/50 px-2 py-1 cursor-pointer hover:bg-yellow-900/80 transition-colors relative"
-                            onClick={() => copyToClipboard("GDGCloudMumbai0101241000+")}
+                            onClick={handleCodeClick}
                         >
-                            GDGCloudMumbai0101241000+
+                            {codeRevealed ? "GDGCloudMumbai0101241000+" : "[ Click to reveal ]"}
                             {copied && (
                                 <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-green-900 text-green-300 px-2 py-1 text-xs rounded">
                                     Copied!
+                                </span>
+                            )}
+                            {codeRevealed && !copied && (
+                                <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-blue-900 text-blue-300 px-2 py-1 text-xs rounded">
+                                    Click again to copy
                                 </span>
                             )}
                         </span>
